@@ -15,12 +15,16 @@ body{
   min-height:100vh;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
+  padding:40px 0;
+}
+
+.container{
+  width:380px;
 }
 
 .profile-card{
   background:#fff;
-  width:360px;
   border-radius:25px;
   box-shadow:0 20px 40px rgba(0,0,0,.15);
   text-align:center;
@@ -32,7 +36,7 @@ body{
   width:120px;
   height:120px;
   border-radius:50%;
-  background:url(https://img.alfrsantv.com/img/f176882709321981.png') center/cover no-repeat;
+  background:url('avatar.jpg') center/cover no-repeat;
   margin:-80px auto 15px;
   border:6px solid #fff;
   box-shadow:0 10px 25px rgba(0,0,0,.2);
@@ -90,6 +94,44 @@ h1{
   font-size:14px;
 }
 
+/* بوستات */
+.posts{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.post{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  overflow:hidden;
+  animation:fadeIn .8s ease;
+}
+
+.post img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.post-content{
+  padding:15px;
+}
+
+.post-content h3{
+  margin:0 0 8px;
+  font-size:18px;
+  color:#333;
+}
+
+.post-content p{
+  margin:0;
+  font-size:14px;
+  color:#666;
+}
+
 @keyframes fadeIn{
   from{opacity:0;transform:translateY(30px)}
   to{opacity:1;transform:translateY(0)}
@@ -99,21 +141,54 @@ h1{
 
 <body>
 
-<div class="profile-card">
-  <div class="avatar"></div>
+<div class="container">
 
-  <h1>Noha <span class="verified">✔</span></h1>
-  <div class="bio">الأنوثة قوة… والهدوء جمال</div>
+  <div class="profile-card">
+    <div class="avatar"></div>
 
-  <div class="socials">
-    <a href="#">🌸</a>
-    <a href="#">💌</a>
-    <a href="#">📸</a>
+    <h1>Noha <span class="verified">✔</span></h1>
+    <div class="bio">برمجة وتطوير مواقع 💻✨</div>
+
+    <div class="socials">
+      <a href="#">🌸</a>
+      <a href="#">💌</a>
+      <a href="#">📸</a>
+    </div>
+
+    <div class="quote">
+      كوني جميلة بروحك قبل شكلك 💗
+    </div>
   </div>
 
-  <div class="quote">
-    كوني جميلة بروحك قبل شكلك 💗
+  <!-- قسم البوستات -->
+  <div class="posts">
+
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+      <div class="post-content">
+        <h3>يوم جميل 💖</h3>
+        <p>الهدوء والجمال يبدأ من الداخل.</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+      <div class="post-content">
+        <h3>ستايل ناعم 🌸</h3>
+        <p>البساطة هي سر الأناقة.</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+      <div class="post-content">
+        <h3>طاقة إيجابية ✨</h3>
+        <p>اختاري السعادة دائمًا.</p>
+      </div>
+    </div>
+
   </div>
+
 </div>
 
 </body>
