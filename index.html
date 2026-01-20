@@ -2,191 +2,233 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Noha</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noha</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
   margin:0;
-  font-family:'Cairo',sans-serif;
-  background:linear-gradient(135deg,#ffd6e8,#e7d4ff,#ffffff);
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  padding:40px 0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Tajawal', sans-serif;
 }
 
-.container{
-  width:380px;
-}
-
-.profile-card{
-  background:#fff;
-  border-radius:25px;
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-  text-align:center;
-  padding:30px 20px;
-  animation:fadeIn .8s ease;
-}
-
-.avatar{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:url('avatar.jpg') center/cover no-repeat;
-  margin:-80px auto 15px;
-  border:6px solid #fff;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-h1{
-  margin:10px 0 5px;
-  font-size:24px;
+body{
+  background:linear-gradient(135deg,#f6d5f7,#fbe9d7);
   color:#333;
 }
 
-.verified{
-  color:#1da1f2;
-  font-size:18px;
+/* Cover */
+.cover{
+  height:260px;
+  background:url('https://picsum.photos/1200/600?girl') center/cover no-repeat;
+  position:relative;
 }
 
+/* Profile Card */
+.profile{
+  max-width:900px;
+  margin:-100px auto 30px;
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  text-align:center;
+}
+
+/* Avatar */
+.avatar{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:url('avatar.jpg') center/cover no-repeat;
+  margin:-80px auto 10px;
+  border:6px solid #fff;
+}
+
+/* Name */
+.profile h1{
+  font-size:26px;
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+
+.profile h1 i{
+  color:#ff6fae;
+}
+
+/* Username */
+.username{
+  color:#888;
+  margin:5px 0;
+}
+
+/* Bio */
 .bio{
-  color:#777;
-  font-size:14px;
-  margin-bottom:20px;
+  font-size:15px;
+  line-height:1.7;
+  margin:10px 0 20px;
+  color:#555;
 }
 
-.socials{
+/* Actions */
+.actions{
   display:flex;
   justify-content:center;
   gap:15px;
+  margin-bottom:10px;
 }
 
-.socials a{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f5f5f5;
-  color:#555;
-  font-size:20px;
-  text-decoration:none;
+.btn{
+  padding:10px 20px;
+  border:none;
+  border-radius:25px;
+  background:#ff6fae;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
   transition:.3s;
 }
 
-.socials a:hover{
-  background:#ff6fae;
-  color:#fff;
-  transform:translateY(-4px);
+.btn:hover{
+  background:#ff4f98;
 }
 
-.quote{
-  margin-top:25px;
-  background:#fff0f6;
-  padding:15px;
-  border-radius:15px;
-  color:#555;
-  font-size:14px;
+.followers{
+  font-weight:600;
+  color:#333;
 }
 
-/* بوستات */
+/* Posts */
 .posts{
-  margin-top:30px;
-  display:flex;
-  flex-direction:column;
+  max-width:900px;
+  margin:20px auto 60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
   gap:20px;
 }
 
 .post{
   background:#fff;
-  border-radius:20px;
+  border-radius:18px;
+  padding:20px;
   box-shadow:0 10px 25px rgba(0,0,0,.1);
-  overflow:hidden;
-  animation:fadeIn .8s ease;
+  transition:.3s;
 }
 
-.post img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
+.post:hover{
+  transform:translateY(-5px);
 }
 
-.post-content{
-  padding:15px;
+.post span{
+  color:#ff6fae;
+  font-size:13px;
+  font-weight:600;
 }
 
-.post-content h3{
-  margin:0 0 8px;
+.post h3{
+  margin:8px 0;
   font-size:18px;
-  color:#333;
 }
 
-.post-content p{
-  margin:0;
+.post p{
   font-size:14px;
-  color:#666;
+  color:#555;
+  line-height:1.7;
 }
 
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+
+footer span{
+  color:#ff6fae;
+}
+
+footer a{
+  color:#333;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .profile{margin:-80px 15px 20px;}
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="cover"></div>
 
-  <div class="profile-card">
-    <div class="avatar"></div>
+<div class="profile">
+  <div class="avatar"></div>
 
-    <h1>Noha <span class="verified">✔</span></h1>
-    <div class="bio">برمجة وتطوير مواقع 💻✨</div>
+  <h1>Noha <i class="fas fa-check-circle"></i></h1>
+  <div class="username">@noha.queen</div>
 
-    <div class="socials">
-      <a href="#">🌸</a>
-      <a href="#">💌</a>
-      <a href="#">📸</a>
-    </div>
-
-    <div class="quote">
-      كوني جميلة بروحك قبل شكلك 💗
-    </div>
+  <div class="bio">
+    كوني أنيقة في حضورك، قوية في صمتك، جميلة في روحك ✨
   </div>
 
-  <!-- قسم البوستات -->
-  <div class="posts">
+  <div class="actions">
+    <button class="btn" id="followBtn">تابعيني</button>
+    <div class="followers" id="count">1200 متابع</div>
+  </div>
+</div>
 
-    <div class="post">
-      <div class="post-content">
-        <h3>يوم جميل 💖</h3>
-        <p>الهدوء والجمال يبدأ من الداخل.</p>
-      </div>
-    </div>
+<div class="posts">
 
-    <div class="post">
-      <div class="post-content">
-        <h3>ستايل ناعم </h3>
-        <p>البساطة هي سر الأناقة.</p>
-      </div>
-    </div>
+  <div class="post">
+    <span>خواطر</span>
+    <h3>قوتي</h3>
+    <p>أنا قوية لأنني تعلمت كيف أبتسم رغم كل شيء.</p>
+  </div>
 
-    <div class="post">
-      <div class="post-content">
-        <h3>طاقة إيجابية </h3>
-        <p>اختاري السعادة دائمًا.</p>
-      </div>
-    </div>
+  <div class="post">
+    <span>إلهام</span>
+    <h3>ثقتي</h3>
+    <p>ثقتي بنفسي هي سر جمالي الحقيقي.</p>
+  </div>
 
+  <div class="post">
+    <span>حياة</span>
+    <h3>هدوئي</h3>
+    <p>الهدوء لا يعني الضعف، بل يعني السلام الداخلي.</p>
   </div>
 
 </div>
+
+<footer>
+  <span>برمجة وتطوير</span>  
+  <a href="https://xat.me/oOiiMahmoudiiOo" target="_blank">ζ͜͡Maђϻoud</a>
+</footer>
+
+<script>
+let followed = false;
+let count = 1200;
+
+document.getElementById("followBtn").onclick = function(){
+  if(!followed){
+    count++;
+    this.innerText = "تمت المتابعة";
+  }else{
+    count--;
+    this.innerText = "تابعيني";
+  }
+  document.getElementById("count").innerText = count + " متابع";
+  followed = !followed;
+}
+</script>
 
 </body>
 </html>
