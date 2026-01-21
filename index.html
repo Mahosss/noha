@@ -17,10 +17,11 @@
 }
 
 body{
-  background:linear-gradient(135deg,#f6d5f7,#fbe9d7);
+  background:linear-gradient(135deg,#fbe7f2,#fdeff7);
   color:#333;
 }
 
+/* Cover */
 .cover{
   height:260px;
   background:url('https://img.alfrsantv.com/img/f176894661057721.jpg') center/cover no-repeat;
@@ -28,100 +29,122 @@ body{
   z-index:1;
 }
 
+/* Profile Card */
 .profile{
   max-width:900px;
   margin:-100px auto 30px;
   background:#fff;
-  border-radius:20px;
-  padding:25px;
-  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  border-radius:25px;
+  padding:30px 20px;
+  box-shadow:0 20px 50px rgba(255,105,180,.25);
   text-align:center;
   position:relative;
   z-index:2;
 }
 
+/* Avatar with Glow */
 .avatar{
-  width:130px;
-  height:130px;
+  width:140px;
+  height:140px;
   border-radius:50%;
   background:url('https://img.alfrsantv.com/img/f176882709321981.png') center/cover no-repeat;
-  margin:-80px auto 10px;
-  border:6px solid #fff;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  margin:-90px auto 10px;
+  border:7px solid #fff;
+  box-shadow:
+    0 0 25px rgba(255,111,174,0.8),
+    0 10px 30px rgba(0,0,0,0.25);
   position:relative;
   z-index:3;
 }
 
+/* Name */
 .profile h1{
-  font-size:26px;
+  font-size:28px;
   margin-top:10px;
   display:flex;
   justify-content:center;
   align-items:center;
   gap:8px;
+  color:#ff6fae;
+  text-shadow:0 0 8px rgba(255,111,174,.6);
 }
 
 .profile h1 i{
   color:#ff6fae;
 }
 
+/* Username */
 .username{
-  color:#888;
+  color:#999;
   margin:5px 0;
 }
 
+/* Bio */
 .bio{
   font-size:15px;
-  line-height:1.7;
-  margin:10px 0 20px;
-  color:#555;
+  line-height:1.8;
+  margin:15px 0 25px;
+  color:#666;
 }
 
+/* Posts */
 .posts{
   max-width:900px;
   margin:20px auto 60px;
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:20px;
+  gap:22px;
+  padding:0 15px;
 }
 
+/* Post Card */
 .post{
   background:#fff;
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1);
-  transition:.3s;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 12px 30px rgba(255,105,180,.15);
+  transition:.35s;
+  border:1px solid #ffe0ee;
 }
 
 .post:hover{
-  transform:translateY(-5px);
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 25px 50px rgba(255,105,180,.3);
 }
 
+/* Post Tag */
 .post span{
   color:#ff6fae;
   font-size:13px;
-  font-weight:600;
+  font-weight:700;
 }
 
+/* Post Title Gradient */
 .post h3{
   margin:8px 0;
   font-size:18px;
+  background:linear-gradient(90deg,#ff6fae,#ffb6d9);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
+/* Post Text */
 .post p{
   font-size:14px;
   color:#555;
   line-height:1.7;
 }
 
+/* Footer */
 footer{
   text-align:center;
-  padding:20px;
+  padding:25px 10px;
   font-size:14px;
 }
 
 footer span{
   color:#ff6fae;
+  font-weight:600;
 }
 
 footer a{
@@ -130,8 +153,30 @@ footer a{
   font-weight:700;
 }
 
+/* Mobile تحسين */
 @media(max-width:600px){
-  .profile{margin:-80px 15px 20px;}
+  .profile{
+    margin:-80px 15px 20px;
+    padding:25px 15px;
+  }
+
+  .avatar{
+    width:120px;
+    height:120px;
+    margin:-75px auto 10px;
+  }
+
+  .profile h1{
+    font-size:24px;
+  }
+
+  .bio{
+    font-size:14px;
+  }
+
+  .post{
+    padding:18px;
+  }
 }
 </style>
 </head>
@@ -142,11 +187,11 @@ footer a{
 <div class="profile">
   <div class="avatar"></div>
 
-  <h1>•N̵o̷h̵a̶•<i class="fas fa-check-circle"></i></h1>
+  <h1>•N̵o̷h̵a̶• <i class="fas fa-check-circle"></i></h1>
   <div class="username">@noha</div>
 
   <div class="bio">
-    كوني أنيقة في حضورك، قوية في صمتك، جميلة في روحك 
+    كوني أنيقة في حضورك، قوية في صمتك، جميلة في روحك ✨
   </div>
 </div>
 
