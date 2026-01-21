@@ -230,6 +230,19 @@ footer{
 footer span{color:#ff6fae; font-weight:600;}
 footer a{color:#333; text-decoration:none; font-weight:700;}
 
+/* link */
+.link-no-style{
+  color: inherit;        /* يستخدم نفس لون النص الحالي */
+  text-decoration: none; /* يلغي الخط السفلي */
+  font-weight:700;       /* يتطابق مع بقية الكلمات */
+  cursor: pointer;       /* يظهر كيد للضغط */
+}
+
+.link-no-style:hover{
+  text-decoration: underline; /* فقط عند المرور على الرابط */
+}
+
+  
 /* Mobile */
 @media(max-width:600px){
   .profile{margin:-80px 15px 20px;}
@@ -276,7 +289,7 @@ footer a{color:#333; text-decoration:none; font-weight:700;}
     <div class="info-item">
       <i class="fa-solid fa-comments"></i>
       <span>دردشتي</span>
-      <p><a href="https://xat.com/melodylovers" target="_blank">شات ميلودى</a></p>
+      <p><a href="https://xat.com/melodylovers" target="_blank" class="link-no-style">ميلودى</a></p>
 
     </div>
   </div>
